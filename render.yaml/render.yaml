@@ -1,0 +1,8 @@
+services:
+  - name: customer-churn-prediction
+    buildCommand: |
+      apt-get update && apt-get install -y curl
+      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+      export PATH="$HOME/.cargo/bin:$PATH"
+      pip install -r requirements.txt
+    startCommand: python app.py
