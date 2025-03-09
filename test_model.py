@@ -24,3 +24,5 @@ prediction = model.predict(sample_df)
 
 # Display result
 print("Predicted Churn:", "Yes" if prediction[0] == 1 else "No")
+print(type(model))
+
